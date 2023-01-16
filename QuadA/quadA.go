@@ -1,4 +1,4 @@
-package piscine
+package main
 
 import "github.com/01-edu/z01"
 
@@ -18,7 +18,10 @@ func QuadA(x, y int) {
 			for k := 0; k < x-2; k++ {
 				z01.PrintRune(' ')
 			}
-			z01.PrintRune('|')
+			// condition pour l'affichage du deuxième "|"
+			if x != 1 {
+				z01.PrintRune('|')
+			}
 			z01.PrintRune('\n')
 		}
 		if y > 1 {
@@ -59,4 +62,8 @@ func QuadA(x, y int) {
 			z01.PrintRune('\n')
 		}
 	}
+}
+
+func main() {
+	QuadA(1, 5)
 }
